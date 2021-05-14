@@ -1,0 +1,147 @@
+.header {
+    position: relative;
+    background-color: aquamarine;
+    height: 25vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-1, 0.8), rgba($color-primary-2, 0.8), rgba($color-Secondary-1, .8)), url(/dist/assets/images/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0% 100%);
+    ;
+
+
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30rem);
+    }
+
+    80% {
+        transform: translateX(.3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30rem);
+    }
+
+    80% {
+        transform: translateX(-.3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+
+
+
+.btn:link,
+.btn:visited {
+    //     text-transform: uppercase;
+    // text-decoration: none;
+    @include style-link-text($color-text-1);
+    display: inline-block;
+    padding: .6rem 1.5rem;
+    border-radius: 5rem;
+    transition: .2s;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+    position: relative;
+
+
+}
+
+.btn:hover {
+    transform: translateY(-.2rem);
+}
+
+.btn:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba($color-black, 0.4);
+}
+
+
+.btn--white {
+
+    background-color: white;
+    padding: .6rem 1.2rem;
+    border-radius: 5rem;
+}
+
+.btn--white::after {
+
+    background-color: white;
+
+}
+
+.btn::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+}
+
+.btn:hover::after {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.btn--animation {
+    animation: moveInBottom .6s ease-in;
+    animation-fill-mode: backwards;
+}
+
+.btn-text {
+
+    &:link,
+    &:visited {
+        @include style-link-text($color-Secondary-1);
+        display: inline-block;
+        font-size: $default-font-size;
+        border-bottom: .1rem solid $color-Secondary-1;
+        padding: 3px;
+        transition: all .3s;
+    }
+
+    &:hover {
+        background-color: $color-Secondary-1;
+        color: white;
+        box-shadow: 0 .1rem 2rem rgba($color-black, .15rem);
+        transform: translateY(-.3rem);
+    }
+
+    &:active {
+        box-shadow: 0 .1rem 2rem rgba($color-black, .1rem);
+        transform: translateY(-.1rem);
+    }
+}

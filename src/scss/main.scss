@@ -1,0 +1,35 @@
+@import "./base";
+@import "./components";
+@import "./about";
+@import "./home";
+@import "./typography";
+@import "./utility";
+@import "./composition";
+
+// Variables
+
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+
+    font-size: 62.5%; //1 rem = 10px  (10px-required/16px-default =.625 =62.5%)
+    // margin: 0;
+}
+
+body {
+    // background-color: aqua;
+    font-family: "Lato", sans-serif;
+    font-weight: 400px;
+    line-height: 1.7;
+    color: #777;
+    padding: 20px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,26 @@
+.composition {
+    position: relative;
+
+
+    &__photo {
+        width: 55%;
+        box-shadow: 0 .3rem 2rem rgba($color-black, .15rem);
+        border-radius: .2rem;
+        position: absolute;
+
+        &--p1 {
+            left: 0;
+            top: -1rem;
+        }
+
+        &--p2 {
+            left: 20%;
+            top: 0;
+        }
+
+        &--p3 {
+            left: 0;
+            top: 1rem;
+        }
+    }
+}

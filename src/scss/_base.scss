@@ -1,0 +1,50 @@
+/*
+Light Green : #7ed56f
+Medium Green : #55c57a
+Dark Green : #28b485
+
+
+
+*/
+
+h1 {
+    color: orange;
+}
+
+// Color
+$color-primary-1:#40E0D0;
+$color-primary-2: #ff8c00;
+$color-Secondary-1:#FF0080;
+$color-text-1 : #808080;
+$color-black:#000000;
+$color-light-grey:#f1f1f1;
+
+// Dimension
+$grid-width:114rem;
+$gird-vertical-gutter:2rem;
+$grid-horizontal-gutter:2rem;
+
+
+// Font Size
+$default-font-size:1.6rem;
+
+@mixin style-link-text {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: grey;
+}
+
+@mixin style-link-text($text-col) {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $text-col;
+}
+
+@mixin clearfix {
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
